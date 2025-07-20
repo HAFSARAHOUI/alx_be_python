@@ -1,5 +1,3 @@
-# library_system.py
-
 class Book:
     def __init__(self, title, author):
         self.title = title
@@ -8,11 +6,10 @@ class Book:
     def __str__(self):
         return f"Book: {self.title} by {self.author}"
 
-
 class EBook(Book):
     def __init__(self, title, author, file_size):
         super().__init__(title, author)
-        self.file_size = file_size
+        self.file_size = file_size  # in KB
 
     def __str__(self):
         return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
@@ -32,9 +29,9 @@ class Library:
         self.books = []
 
     def add_book(self, book):
-        if isinstance(book, Book):
-            self.books.append(book)
+        self.books.append(book)
+        # self.books.append
 
     def list_books(self):
         for book in self.books:
-            print(book)  # __str__ will be called here
+            print(book)

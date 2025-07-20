@@ -1,5 +1,4 @@
-# main.py
-
+# for library_system.py project
 from library_system import Book, EBook, PrintBook, Library
 
 def main():
